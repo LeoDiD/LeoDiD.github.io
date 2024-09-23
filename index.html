@@ -1,113 +1,143 @@
-<html></html>
- <head>
-  <title>
-   Leovi Garcia
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-   body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            text-align: center;
-        }
-        .profile-pic {
-            width: 10rem;
-            height: auto;
-            background-color: var(--dark);
-            border-radius: 50%;
-            display: inline;
-        }
-        .name {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .intro {
-            font-size: 18px;
-            margin-top: 20px;
-        }
-        .intro p {
-            margin: 5px 0;
-        }
-        .button {
-            background-color: #000000;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .button:hover {
-            background-color: #333333;
-        }
-        .skills {
-            margin-top: 20px;
-        }
-        .skills img {
-            width: 50px;
-            margin: 0 10px;
-        }
-        .construction {
-            width: 200px;
-            height: 200px;
-            background-color: #333333;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px auto;
-            position: relative;
-        }
-        .construction::before {
-            content: "UNDER CONSTRUCTION";
-            transform: rotate(-45deg);
-            position: absolute;
-            font-size: 18px;
-        }
-  </style>
- </head>
- <body>
-  <div class="container">
-   <div class="profile-pic">
-    <img alt="profile" height="50" src="pogi.jpg" width="50"/>
-   </div>
-   <div class="name">
-    Leovi Garcia
-   </div>
-   <div class="intro">
-    <p>
-     Intro
-    </p>
-    <p>
-     Hello, I'm an aspiring full-stack developer
-    </p>
-    <button class="button">
-     Hire Me
-    </button>
-    <p>
-     Went to Mangaldan National High School
-    </p>
-    <p>
-     Live in Mangaldan, Pangasinan
-    </p>
-   </div>
-   <div class="skills">
-    <img alt="HTML5 logo" height="50" src="html5.png" width="150"/>
-    <img alt="CSS3 logo" height="50" src="OIP.jpg" width="150"/>
-    <img alt="JavaScript logo" height="50" src="19224697601_6b600f21eb.jpg" width="50"/>
-   </div>
-   <div class="construction">
-   </div>
-  </div>
- </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- Add Tailwind CSS styles here -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <title>My Portfolio</title>
+</head>
+<body class="bg-gray-100">
+    <!--==================== NAVBAR ====================-->
+    <header class="flex justify-between items-center py-2 px-4 bg-gray-500 text-white sticky top-0 z-50">
+        <div class="flex items-center">
+        </div>
+        <button id="menuButton" class="p-4 flex justify-center items-center ">
+          <span class="w-12 h-18 justify-center items-center max-w-[1px] max-h-[1px]">
+            <img src="mo.png" alt="Image">
+          </span>
+        </button>
+      </header>
+
+      <aside id="sidebar" class="fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-gray-100 to-gray-200 shadow-lg transform translate-x-full transition-transform duration-300">
+        <div class="flex justify-end p-4">
+          <button id="closeButton" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+            <i class="fas fa-times"></i> X
+          </button>
+        </div>
+        <div class="p-4">
+          <nav class="mt-8 mb-4">
+            <ul class="space-y-4 pl-8">
+              <li><a href="#home" class="text-lg font-bold font-sans text-gray-700 hover:bg-gray-300">HOME</a></li>
+              <li><a href="#about" class="text-lg font-bold font-sans text-gray-700 hover:bg-gray-300">ABOUT ME</a></li>
+              <li><a href="#skils" class="text-lg font-bold font-sans text-gray-700 hover:bg-gray-300">SKILLS</a></li>
+              <li><a href="#project" class="text-lg font-bold font-sans text-gray-700 hover:bg-gray-300">PROJECT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section bg-gray-500 py-16" id="home">
+            <div class="home__container flex flex-col justify-center items-center">
+                <img src="pogi.jpg" alt="About Image" class="about__img rounded-full shadow-lg mb-4">
+                <h1 class="text-3xl font-bold mb-2">-LEOVI C. GARCIA-</h1>
+                <button id="dark-mode-toggle" class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mb-4">Toggle Dark Mode</button>
+                <p class="section__description text-gray-800">Aspiring Full-stack Developer</p>
+                <ul class="contact flex justify-center items-center gap-4 mt-4">
+                    <a href="https://www.facebook.com/leovi.garcia.56?mibextid=ZbWKwL" target="_blank" title="Visit my Facebook account">
+                        <img src="icons8-facebook-60.png" alt="Facebook" class="w-10 h-10 rounded-full shadow-lg">
+                    </a>
+                    <a href="https://github.com/LeoDiD" target="_blank" title="Visit my Github account">
+                        <img src="icons8-github-60.png" alt="Github" class="w-10 h-10 rounded-full shadow-lg">
+                    </a>
+                    <a href="https://www.linkedin.com/in/leovi-casipit-garcia-963b90329/" target="_blank" title="Visit my LinkedIn account">
+                        <img src="icons8-linkedin-60.png" alt="LinkedIn" class="w-10 h-10 rounded-full shadow-lg">
+                    </a>
+                </ul>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about section bg-gray-200 py-16" id="about">
+            <div class="about__container flex flex-col justify-center items-center">
+                <h2 class="text-4xl font-bold text-gray-800">About Me</h2>
+                <h4 class="greet text-4xl text-black-300 mt-4" style="font-weight: 400;">Hello There!</h4>
+                <p class="detail text-2xl text-gray-600 mt-4">My name is Leovi C. Garcia, I am from Maasin Mangaldan, Pangasinan. I am a 2nd Year student at PHINMA-University of Pangasinan (Dagupan Campus).</p>
+            </div>
+        </section>
+
+        <!--==================== SKILLS ====================-->
+        <section class="skills section bg-gray-100 py-16" id="skills">
+            <div class="skills__container flex flex-col justify-center items-center">
+                <h2 class="section__title text-4xl font-bold text-gray-800">My Skills</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 mt-4">
+                    <!-- Skills Content -->
+                    <div class="border border-gray-500 rounded-lg p-6 flex flex-col items-center hover:bg-gray-300">
+                        <img alt="html logo" class="mb-4" height="100" src="icons8-html-96.png" width="100"/>
+                        <span class="text-grey">HTML</span>
+                    </div>
+                    <div class="border border-gray-500 rounded-lg p-6 flex flex-col items-center hover:bg-gray-300">
+                        <img alt="css logo" class="mb-4" height="100" src="icons8-css-96.png" width="100"/>
+                        <span class="text-grey">CSS</span>
+                    </div>
+                    <div class="border border-gray-500 rounded-lg p-6 flex flex-col items-center hover:bg-gray-300">
+                        <img alt="js logo" class="mb-4" height="105" src="js.png" width="105"/>
+                        <span class="text-grey">JAVASCRIPT</span>
+                    </div>
+                    <div class="border border-gray-500 rounded-lg p-6 flex flex-col items-center hover:bg-gray-300">
+                        <img alt="MySQL logo" class="mb-4" height="100" src="ms.png" width="100"/>
+                        <span class="text-grey">MySQL</span>
+                    </div>
+                    <div class="border border-gray-500 rounded-lg p-6 flex flex-col items-center hover:bg-gray-300">
+                        <img alt="tailwind logo" class="mb-4" height="100" src="Tailwind_CSS_Logo.png" width="100"/>
+                        <span class="text-grey">TailWind CSS</span>
+                    </div>
+                    <div class="border border-gray-500 rounded-lg p-6 flex flex-col items-center hover:bg-gray-300">
+                        <img alt="figma logo" class="mb-4" height="60" src="figma.png" width="60"/>
+                        <span class="text-grey">FIGMA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PROJECTS ====================-->
+        <section class="Projects section bg-gray-200 py-16" id="project">
+            <div class="Projects__container flex flex-col justify-center items-center">
+                <h2 class="section__title text-4xl font-bold text-gray-800">PROJECTS</h2>
+                <div class="grid grid-cols-3 md:grid-cols-4 gap-6 p-6 mt-4">
+                    <!-- Project Item -->
+                    <div class="border border-gray-500 rounded-lg shadow-sm p-6 transform transition-transform duration-300 hover:scale-105 hover:bg-gray-300">
+                        <img alt="Project Image" class="mb-4" height="100" src="pogi.jpg" width="100"/>
+                        <h3 class="text-lg font-semibold mb-2">PRACTICE</h3>
+                        <p class="text-sm text-gray-600 mb-4">I'm still making my project</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Script for Sidebar Toggle -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuButton = document.getElementById("menuButton");
+            const closeButton = document.getElementById("closeButton");
+            const sidebar = document.getElementById("sidebar");
+
+            menuButton.addEventListener("click", function() {
+                sidebar.classList.toggle("translate-x-full");
+                sidebar.classList.toggle("translate-x-0");
+            });
+
+            closeButton.addEventListener("click", function() {
+                sidebar.classList.add("translate-x-full");
+            });
+        });
+    </script>
+</body>
 </html>
